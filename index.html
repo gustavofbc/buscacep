@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/buscacep.ico">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Buscacep</title>
+</head>
+<body>
+  <img src="images/logo.svg" alt="Logo buscacep" class="logo">
+  <form name="buscadorDeCep" id="buscadorDeCep">
+    <input type="number" name="cep" id="cep" placeholder="Informe o CEP">
+    <button type="submit" class="buscar">Buscar
+      <img src="images/search.svg" alt="buscar" class="search">
+    </button>
+  </form>
+  
+  <div class="resultado">
+    <label for="cep-value">CEP:
+      <span name="cep-value" id="cep-value"></span>
+    </label>
+
+    <label for="cidade-value">Cidade:
+      <span name="cidade-value" id="cidade-value"></span>
+    </label>
+
+    <label for="bairro-value">Bairro:
+      <span name="bairro-value" id="bairro-value"></span>
+    </label>
+
+    <label for="logradouro-value">Logradouro:
+      <span name="logradouro-value" id="logradouro-value"></span>
+    </label>
+
+    <label for="uf-value">UF:
+      <span name="uf-value" id="uf-value"></span>
+    </label>
+
+    <label for="prefixo-value">DDD:
+      <span name="prefixo-value" id="prefixo-value"></span>
+    </label>
+    
+    <label for="siafi-value">Siafi:
+      <span name="siafi-value" id="siafi-value"></span>
+    </label>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

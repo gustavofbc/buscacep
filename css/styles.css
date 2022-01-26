@@ -1,0 +1,97 @@
+:root{
+  --red: #EE5544;
+  --background-red: #F34336;
+  --background: #FAF6ED;
+}
+
+/* Fonts */
+@font-face {
+  src: url("../fonts/Jura/static/Jura-Regular.ttf");
+  font-family: "Jura-regular";
+  font-weight: normal;
+}
+
+@font-face {
+  src: url("../fonts/Jura/static/Jura-Bold.ttf");
+  font-family: "Jura-bold";
+  font-weight: bold;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--background-red);
+  font-family: 'Jura-bold', monospace;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  background: var(--background);
+  border-radius: 6px;
+  border: 2px solid black;
+  width: 18rem;
+  box-shadow: 10px 5px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+}
+
+.logo {
+  width: 20rem;
+}
+
+#buscadorDeCep {
+  display: flex;
+  justify-content: space-between;
+  width: 30rem;
+  padding: 25px;
+}
+
+#buscadorDeCep .buscar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 120px;
+  height: 45px;
+  color: white;
+  background: var(--red);
+  font-family: 'Jura-bold', monospace;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  border: 2px solid black;
+  box-shadow: 10px 5px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
+
+#buscadorDeCep .buscar:hover {
+  background-color: rgba(220, 75, 75, 0.9);
+}
+
+#buscadorDeCep .buscar .search {
+  margin-top: 4px;
+}
+
+.resultado {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 30rem;
+  padding: 20px;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  background: var(--background);
+  box-shadow: 10px 5px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.resultado label {
+  
+}
