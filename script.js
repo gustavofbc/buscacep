@@ -12,6 +12,8 @@ const ufValue = document.querySelector('#uf-value');
 const dddValue = document.querySelector('#prefixo-value');
 const siafiValue = document.querySelector('#siafi-value');
 
+const errorMensage = document.querySelector('.cep-validation');
+
 function buscarCep(event) {
   event.preventDefault();
   const cep = formulario.cep.value;
@@ -19,7 +21,7 @@ function buscarCep(event) {
   .then(response =>response.json())
   .then(body => {
     if(body.erro == true){
-      console.log(Error('Digite um CEP válido'))
+      notifyMensage();
     } else {
       cepValue.innerText = body.cep;
       cidadeValue.innerText = body.localidade;
@@ -30,6 +32,15 @@ function buscarCep(event) {
       siafiValue.innerText = body.siafi;
     }
   })
+}
+
+function notifyMensage() {
+  errorMensage.classList.add('notify');
+  errorMensage.innerText = 'Informe um CEP válido';
+  setTimeout(() => {
+    errorMensage.innerText = null;
+    errorMensage.classList.remove('notify');
+  }, 3000);
 }
 
 btnBuscar.addEventListener('click', buscarCep);
