@@ -102,3 +102,17 @@ input {
   width: 30rem;
   border-radius: 4px;
 }
+
+@media (max-width: 600px) {
+  #buscadorDeCep, .resultado {
+    max-width: 20rem;
+  }
+
+  input {
+    width: 10rem;
+  }
+
+  .cep-validation.notify {
+    width: 20rem;
+  }
+}
