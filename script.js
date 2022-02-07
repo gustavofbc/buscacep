@@ -22,6 +22,13 @@ function buscarCep(event) {
   .then(body => {
     if(body.erro == true){
       notifyMensage();
+      cepValue.innerText = null;
+      cidadeValue.innerText = null;
+      bairroValue.innerText = null;
+      logradouroValue.innerText =null;
+      ufValue.innerText = null;
+      dddValue.innerText = null;
+      siafiValue.innerText = null;
     } else {
       cepValue.innerText = body.cep;
       cidadeValue.innerText = body.localidade;
